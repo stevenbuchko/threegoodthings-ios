@@ -1,0 +1,6 @@
+framework module Pods_threegoodthings {
+  umbrella header "Pods-threegoodthings-umbrella.h"
+
+  export *
+  module * { export * }
+}

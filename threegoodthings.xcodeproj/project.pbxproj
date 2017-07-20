@@ -7,21 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D633C711F20354F0002BEB0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9D633C701F20354F0002BEB0 /* GoogleService-Info.plist */; };
+		9D8EE4511F1DA2850079859A /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8EE4501F1DA2850079859A /* SignupVC.swift */; };
 		9DBF73421F145EE50015FC73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBF73411F145EE50015FC73 /* AppDelegate.swift */; };
-		9DBF73441F145EE50015FC73 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBF73431F145EE50015FC73 /* ViewController.swift */; };
+		9DBF73441F145EE50015FC73 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBF73431F145EE50015FC73 /* SplashVC.swift */; };
 		9DBF73471F145EE50015FC73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DBF73451F145EE50015FC73 /* Main.storyboard */; };
 		9DBF73491F145EE50015FC73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DBF73481F145EE50015FC73 /* Assets.xcassets */; };
 		9DBF734C1F145EE50015FC73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DBF734A1F145EE50015FC73 /* LaunchScreen.storyboard */; };
+		9DD78FBE1F1C33FE00365126 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD78FBD1F1C33FE00365126 /* LoginVC.swift */; };
+		BA17BCD56A5111E0DE4581F4 /* Pods_threegoodthings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD07E0A7CB64CC4004300AC5 /* Pods_threegoodthings.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C464E50FF6C1F321E8B668C /* Pods-threegoodthings.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-threegoodthings.release.xcconfig"; path = "Pods/Target Support Files/Pods-threegoodthings/Pods-threegoodthings.release.xcconfig"; sourceTree = "<group>"; };
+		9D633C701F20354F0002BEB0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9D8EE4501F1DA2850079859A /* SignupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
 		9DBF733E1F145EE50015FC73 /* threegoodthings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = threegoodthings.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DBF73411F145EE50015FC73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9DBF73431F145EE50015FC73 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9DBF73431F145EE50015FC73 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
 		9DBF73461F145EE50015FC73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9DBF73481F145EE50015FC73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9DBF734B1F145EE50015FC73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9DBF734D1F145EE50015FC73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9DD78FBD1F1C33FE00365126 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		E69E86E4E6983EE0C4B4612F /* Pods-threegoodthings.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-threegoodthings.debug.xcconfig"; path = "Pods/Target Support Files/Pods-threegoodthings/Pods-threegoodthings.debug.xcconfig"; sourceTree = "<group>"; };
+		FD07E0A7CB64CC4004300AC5 /* Pods_threegoodthings.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_threegoodthings.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +39,61 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA17BCD56A5111E0DE4581F4 /* Pods_threegoodthings.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		68142E9BC9B77B19CBFF06C0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FD07E0A7CB64CC4004300AC5 /* Pods_threegoodthings.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6D1D980169FFAA7B562949E4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E69E86E4E6983EE0C4B4612F /* Pods-threegoodthings.debug.xcconfig */,
+				1C464E50FF6C1F321E8B668C /* Pods-threegoodthings.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9D62D9961F2037F800F9D3FE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		9D62D9971F2037FE00F9D3FE /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		9D62D9981F20380300F9D3FE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9DBF73431F145EE50015FC73 /* SplashVC.swift */,
+				9DD78FBD1F1C33FE00365126 /* LoginVC.swift */,
+				9D8EE4501F1DA2850079859A /* SignupVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		9DBF73351F145EE50015FC73 = {
 			isa = PBXGroup;
 			children = (
 				9DBF73401F145EE50015FC73 /* threegoodthings */,
 				9DBF733F1F145EE50015FC73 /* Products */,
+				68142E9BC9B77B19CBFF06C0 /* Frameworks */,
+				6D1D980169FFAA7B562949E4 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,12 +108,15 @@
 		9DBF73401F145EE50015FC73 /* threegoodthings */ = {
 			isa = PBXGroup;
 			children = (
+				9D62D9961F2037F800F9D3FE /* Model */,
+				9D62D9981F20380300F9D3FE /* Controller */,
+				9D62D9971F2037FE00F9D3FE /* View */,
 				9DBF73411F145EE50015FC73 /* AppDelegate.swift */,
-				9DBF73431F145EE50015FC73 /* ViewController.swift */,
 				9DBF73451F145EE50015FC73 /* Main.storyboard */,
 				9DBF73481F145EE50015FC73 /* Assets.xcassets */,
 				9DBF734A1F145EE50015FC73 /* LaunchScreen.storyboard */,
 				9DBF734D1F145EE50015FC73 /* Info.plist */,
+				9D633C701F20354F0002BEB0 /* GoogleService-Info.plist */,
 			);
 			path = threegoodthings;
 			sourceTree = "<group>";
@@ -71,9 +128,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9DBF73501F145EE50015FC73 /* Build configuration list for PBXNativeTarget "threegoodthings" */;
 			buildPhases = (
+				131A8929721BE7040ED466B8 /* [CP] Check Pods Manifest.lock */,
 				9DBF733A1F145EE50015FC73 /* Sources */,
 				9DBF733B1F145EE50015FC73 /* Frameworks */,
 				9DBF733C1F145EE50015FC73 /* Resources */,
+				974A8FEB69FA668145E78DE2 /* [CP] Embed Pods Frameworks */,
+				6A9A79A4BE08D41AA848BF35 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -124,6 +184,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9DBF734C1F145EE50015FC73 /* LaunchScreen.storyboard in Resources */,
+				9D633C711F20354F0002BEB0 /* GoogleService-Info.plist in Resources */,
 				9DBF73491F145EE50015FC73 /* Assets.xcassets in Resources */,
 				9DBF73471F145EE50015FC73 /* Main.storyboard in Resources */,
 			);
@@ -131,13 +192,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		131A8929721BE7040ED466B8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6A9A79A4BE08D41AA848BF35 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-threegoodthings/Pods-threegoodthings-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		974A8FEB69FA668145E78DE2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-threegoodthings/Pods-threegoodthings-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9DBF733A1F145EE50015FC73 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9DBF73441F145EE50015FC73 /* ViewController.swift in Sources */,
+				9D8EE4511F1DA2850079859A /* SignupVC.swift in Sources */,
+				9DBF73441F145EE50015FC73 /* SplashVC.swift in Sources */,
 				9DBF73421F145EE50015FC73 /* AppDelegate.swift in Sources */,
+				9DD78FBE1F1C33FE00365126 /* LoginVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +371,7 @@
 		};
 		9DBF73511F145EE50015FC73 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E69E86E4E6983EE0C4B4612F /* Pods-threegoodthings.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = threegoodthings/Info.plist;
@@ -272,6 +384,7 @@
 		};
 		9DBF73521F145EE50015FC73 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C464E50FF6C1F321E8B668C /* Pods-threegoodthings.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = threegoodthings/Info.plist;
@@ -301,6 +414,7 @@
 				9DBF73521F145EE50015FC73 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
