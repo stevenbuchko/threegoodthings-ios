@@ -7,8 +7,13 @@
 //
 
 import UIKit
+import Firebase
 
 class LoginVC: UIViewController {
+    
+    @IBOutlet weak var loginBtn: UIButton!
+    @IBOutlet weak var emailInput: UITextField!
+    @IBOutlet weak var passwordInput: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,11 +67,27 @@ class LoginVC: UIViewController {
     }
     */
 
-    @IBOutlet weak var loginBtn: UIButton!
-    @IBOutlet weak var emailInput: UITextField!
-    @IBOutlet weak var passwordInput: UITextField!
     
     @IBAction func backBtnPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func logInTapped(_ sender: Any) {
+        if let email = emailInput.text, let pwd = passwordInput.text {
+            Auth.auth().signIn(withEmail: email, password: pwd, completion: { (user, error) in
+                if error == nil {
+                    print("STEVEN: Email user authenticated with Firebase")
+                } else {
+                    Auth.auth().createUser(withEmail: email, password: pwd, completion: { (user, error) in
+                        if error != nil {
+                            print("STEVEN: Unable to authenticate with Firebase using email.")
+                        } else {
+                            print("STEVEN: Successfully authenticated with Firebase")
+                        }
+                    })
+                }
+            })
+        }
+        
     }
 }

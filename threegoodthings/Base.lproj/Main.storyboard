@@ -87,6 +87,9 @@
                                 <state key="normal" title="LOG IN WITH FACEBOOK" image="facebook-icon">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="facebookBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Fa-Za-ffc"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eTo-Xo-cHd">
                                 <rect key="frame" x="102" y="516" width="116" height="32"/>
@@ -95,7 +98,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="MhE-3l-W5H" kind="show" id="mqS-D7-tPO"/>
+                                    <segue destination="MhE-3l-W5H" kind="show" id="YSx-P4-g8M"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -183,6 +186,9 @@
                                 <state key="normal" title="LOG IN">
                                     <color key="titleColor" red="0.33402001860000002" green="0.58394956590000002" blue="0.87434220309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="logInTapped:" destination="HPB-vW-i5g" eventType="touchUpInside" id="v30-7b-EDh"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gq7-va-Z3U">
                                 <rect key="frame" x="66" y="428" width="188" height="20"/>

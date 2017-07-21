@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import FBSDKLoginKit
+import Firebase
 
 extension UIColor {
     convenience init(red: Int, green: Int, blue: Int) {
@@ -46,7 +48,38 @@ class SplashVC: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
 
+    @IBAction func facebookBtnTapped(_ sender: Any) {
+        
+        let facebookLogin = FBSDKLoginManager()
+        
+        facebookLogin.logIn(withReadPermissions: ["email"], from: self) { (result, error) in
+            if error != nil {
+                print("STEVEN: Unable to authenticate with Facebook - \(error)")
+            } else if result?.isCancelled == true {
+                print("STEVEN: User cancelled Facebook authentication")
+            } else {
+                print("STEVEN: Successfully authenticated with Facebook")
+                let credential = FacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
+                self.firebaseAuth(credential)
+            }
+        }
+        
+    }
+    
+    func firebaseAuth(_ credential: AuthCredential) {
+        Auth.auth().signIn(with: credential, completion: { (user, error) in
+            if error != nil {
+                print("STEVEN: Unable to authenticate with Firebase - \(error)")
+            } else {
+                print("STEVEN: Successfully authenticated with Firebase")
+            }
+        })
+    }
+    
+    
     @IBOutlet weak var emailLogin: UIButton!
 
     @IBOutlet weak var facebookLogin: UIButton!
