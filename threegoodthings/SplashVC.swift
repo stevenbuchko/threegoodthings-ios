@@ -9,6 +9,7 @@
 import UIKit
 import FBSDKLoginKit
 import Firebase
+import SwiftKeychainWrapper
 
 extension UIColor {
     convenience init(red: Int, green: Int, blue: Int) {
@@ -43,6 +44,13 @@ class SplashVC: UIViewController {
         facebookLogin.layer.cornerRadius = 25
         
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if let _ = KeychainWrapper.standard.string(forKey: KEY_UID) {
+            print("STEVEN: ID found in keychain")
+            performSegue(withIdentifier: "goToMain", sender: nil)
+        }
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -57,13 +65,14 @@ class SplashVC: UIViewController {
         
         facebookLogin.logIn(withReadPermissions: ["email"], from: self) { (result, error) in
             if error != nil {
-                print("STEVEN: Unable to authenticate with Facebook - \(error)")
+                print("STEVEN: Unable to authenticate with Facebook - \(String(describing: error))")
             } else if result?.isCancelled == true {
                 print("STEVEN: User cancelled Facebook authentication")
             } else {
                 print("STEVEN: Successfully authenticated with Facebook")
                 let credential = FacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
                 self.firebaseAuth(credential)
+                self.performSegue(withIdentifier: "goToMain", sender: nil)
             }
         }
         
@@ -72,9 +81,12 @@ class SplashVC: UIViewController {
     func firebaseAuth(_ credential: AuthCredential) {
         Auth.auth().signIn(with: credential, completion: { (user, error) in
             if error != nil {
-                print("STEVEN: Unable to authenticate with Firebase - \(error)")
+                print("STEVEN: Unable to authenticate with Firebase - \(String(describing: error))")
             } else {
                 print("STEVEN: Successfully authenticated with Firebase")
+                if let user = user {
+                    KeychainWrapper.standard.set(user.uid, forKey: KEY_UID)
+                }
             }
         })
     }

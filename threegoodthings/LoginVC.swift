@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import SwiftKeychainWrapper
 
 class LoginVC: UIViewController {
     
@@ -77,12 +78,17 @@ class LoginVC: UIViewController {
             Auth.auth().signIn(withEmail: email, password: pwd, completion: { (user, error) in
                 if error == nil {
                     print("STEVEN: Email user authenticated with Firebase")
+                    self.performSegue(withIdentifier: "goToMain", sender: nil)
                 } else {
                     Auth.auth().createUser(withEmail: email, password: pwd, completion: { (user, error) in
                         if error != nil {
                             print("STEVEN: Unable to authenticate with Firebase using email.")
                         } else {
                             print("STEVEN: Successfully authenticated with Firebase")
+                            if let user = user {
+                                KeychainWrapper.standard.set(user.uid, forKey: KEY_UID)
+                            }
+                            self.performSegue(withIdentifier: "goToMain", sender: nil)
                         }
                     })
                 }

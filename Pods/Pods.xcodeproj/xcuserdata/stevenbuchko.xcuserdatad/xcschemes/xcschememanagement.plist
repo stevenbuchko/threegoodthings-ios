@@ -34,6 +34,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SwiftKeychainWrapper.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>nanopb.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -47,12 +52,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3B74C161684D0DBDFFCBF2530B3AD90E</key>
+		<key>44CAD6CE523055ED339E87154473A254</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>44CAD6CE523055ED339E87154473A254</key>
+		<key>4C1EF633583DC95E63221D9ADA36C8B9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>59B3490EF6705667B69E08A7D8F710EE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
