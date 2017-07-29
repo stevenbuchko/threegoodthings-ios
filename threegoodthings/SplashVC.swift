@@ -85,6 +85,8 @@ class SplashVC: UIViewController {
             } else {
                 print("STEVEN: Successfully authenticated with Firebase")
                 if let user = user {
+                    let userData = ["provider": credential.provider]
+                    DataService.ds.createFirebaseDBUSer(uid: user.uid, userData: userData)
                     KeychainWrapper.standard.set(user.uid, forKey: KEY_UID)
                 }
             }

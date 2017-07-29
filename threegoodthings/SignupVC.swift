@@ -94,6 +94,8 @@ class SignupVC: UIViewController {
                 } else {
                     print("STEVEN: Successfully authenticated with Firebase")
                     if let user = user {
+                        let userData = ["provider": user.providerID]
+                        DataService.ds.createFirebaseDBUSer(uid: user.uid, userData: userData)
                         KeychainWrapper.standard.set(user.uid, forKey: KEY_UID)
                     }
                     self.performSegue(withIdentifier: "goToMain", sender: nil)
