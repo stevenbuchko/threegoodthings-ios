@@ -14,13 +14,25 @@ class MainVC: UIViewController {
 
     @IBOutlet weak var goodBtn: UIButton!
     @IBOutlet weak var goodInput: UITextField!
+    @IBOutlet weak var goodCounter: UILabel!
+    
+    var posts = [Post]()
+    var counter = Int()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        updateCounter()
+        
         // Do any additional setup after loading the view.
         self.view.backgroundColor = babyblue
         goodBtn.layer.cornerRadius = 25
+        
+        //ui set up for goodCounter
+        goodCounter.backgroundColor = UIColor.white
+        goodCounter.layer.cornerRadius = goodCounter.frame.width/2
+        goodCounter.clipsToBounds = true
+        goodCounter.textColor = UIColor(red: 85/255.0, green: 149/255.0, blue: 223/255.0, alpha: 1.0)
         
         // Make placeholder text for goodInput white
         let goodStr = NSAttributedString(string: "I was happy when...", attributes: [NSForegroundColorAttributeName:UIColor.white])
@@ -35,6 +47,15 @@ class MainVC: UIViewController {
         border.borderWidth = width
         goodInput.layer.addSublayer(border)
         goodInput.layer.masksToBounds = true
+        
+        
+        
+        
+//        NotificationCenter.default.addObserver(
+//            self,
+//            selector: #selector(self.batteryLevelChanged),
+//            name: .UIDeviceBatteryLevelDidChange,
+//            object: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -52,7 +73,50 @@ class MainVC: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
+    func postToFirebase() {
+        let date = Date()
+        let calendar = Calendar.current
+        
+        let year = calendar.component(.year, from: date)
+        let month = calendar.component(.month, from: date)
+        let day = calendar.component(.day, from: date)
+        
+        let post: Dictionary<String, Any> = [
+            "goodThing": goodInput.text!,
+            "year": year,
+            "month": month,
+            "day": day,
+        ]
+        
+        let firebasePost = DataService.ds.REF_USER_CURRENT.child("posts").childByAutoId()
+        firebasePost.setValue(post)
+        counter += 1
+        DataService.ds.REF_USER_CURRENT.child("dailyCount").setValue(counter)
+        updateCounter()
+    }
+    
+    func updateCounter() {
+        
+        let ref = DataService.ds.REF_USER_CURRENT.child("dailyCount")
+        
+        ref.observeSingleEvent(of: .value, with: { (snapshot) in
+            if let count = snapshot.value as? Int {
+                self.counter = count
+                self.goodCounter.text = String(describing: self.counter)
+            }
+        })
+    }
+    
 
+    @IBAction func postGoodThing(_ sender: Any) {
+        if goodInput.text != nil && goodInput.text != "" {
+            postToFirebase()
+            goodInput.text = ""
+        }
+    }
+    
     @IBAction func signOutTapped(_ sender: Any) {
         KeychainWrapper.standard.removeObject(forKey: KEY_UID)
         try! Auth.auth().signOut()
