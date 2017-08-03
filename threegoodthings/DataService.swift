@@ -40,7 +40,7 @@ class DataService {
     
     func createFirebaseDBUSer(uid: String, userData: Dictionary<String, String>) {
         REF_USERS.child(uid).updateChildValues(userData)
-        REF_USERS.child(uid).setValue(["dailyCount": 0])
+        // REF_USERS.child(uid).updateValue(["dailyCount": 0])
     }
     
 }
