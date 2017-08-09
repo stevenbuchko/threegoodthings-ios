@@ -93,7 +93,7 @@ class MainVC: UIViewController {
         let firebasePost = DataService.ds.REF_USER_CURRENT.child("posts").childByAutoId()
         firebasePost.setValue(post)
         counter += 1
-        DataService.ds.REF_USER_CURRENT.child("dailyCount").setValue(counter)
+        DataService.ds.REF_USER_CURRENT.child("totalCount").setValue(counter)
         updateCounter()
     }
     
