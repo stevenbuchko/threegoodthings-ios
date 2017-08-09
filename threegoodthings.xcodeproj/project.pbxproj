@@ -11,6 +11,7 @@
 		9D62D99E1F254BBE00F9D3FE /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D62D99D1F254BBE00F9D3FE /* MainVC.swift */; };
 		9D62D9A11F282D2600F9D3FE /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D62D9A01F282D2600F9D3FE /* DataService.swift */; };
 		9D62D9A31F2D11EA00F9D3FE /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D62D9A21F2D11EA00F9D3FE /* Post.swift */; };
+		9D62D9AB1F3A995400F9D3FE /* PopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D62D9AA1F3A995400F9D3FE /* PopupVC.swift */; };
 		9D633C711F20354F0002BEB0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9D633C701F20354F0002BEB0 /* GoogleService-Info.plist */; };
 		9D8EE4511F1DA2850079859A /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8EE4501F1DA2850079859A /* SignupVC.swift */; };
 		9DBF73421F145EE50015FC73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBF73411F145EE50015FC73 /* AppDelegate.swift */; };
@@ -28,6 +29,7 @@
 		9D62D99D1F254BBE00F9D3FE /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		9D62D9A01F282D2600F9D3FE /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		9D62D9A21F2D11EA00F9D3FE /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		9D62D9AA1F3A995400F9D3FE /* PopupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupVC.swift; sourceTree = "<group>"; };
 		9D633C701F20354F0002BEB0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9D8EE4501F1DA2850079859A /* SignupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
 		9DBF733E1F145EE50015FC73 /* threegoodthings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = threegoodthings.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,6 +95,7 @@
 				9DD78FBD1F1C33FE00365126 /* LoginVC.swift */,
 				9D8EE4501F1DA2850079859A /* SignupVC.swift */,
 				9D62D99D1F254BBE00F9D3FE /* MainVC.swift */,
+				9D62D9AA1F3A995400F9D3FE /* PopupVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -279,6 +282,7 @@
 				9D62D9A31F2D11EA00F9D3FE /* Post.swift in Sources */,
 				9D8EE4511F1DA2850079859A /* SignupVC.swift in Sources */,
 				9DBF73441F145EE50015FC73 /* SplashVC.swift in Sources */,
+				9D62D9AB1F3A995400F9D3FE /* PopupVC.swift in Sources */,
 				9DBF73421F145EE50015FC73 /* AppDelegate.swift in Sources */,
 				9DD78FBE1F1C33FE00365126 /* LoginVC.swift in Sources */,
 			);
