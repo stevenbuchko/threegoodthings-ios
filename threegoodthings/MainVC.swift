@@ -83,6 +83,7 @@ class MainVC: UIViewController {
         updateCounter()
     }
     
+    
     func updateCounter() {
         
         let ref = DataService.ds.REF_USER_CURRENT.child("totalCount")

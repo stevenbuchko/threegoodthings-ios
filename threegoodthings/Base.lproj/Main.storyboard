@@ -448,6 +448,7 @@
                     </view>
                     <connections>
                         <outlet property="goodPopup" destination="GBT-uw-kXR" id="vEX-b0-2Bg"/>
+                        <outlet property="yearLabel" destination="trh-JI-Zxd" id="TAf-uK-TYs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W4i-0K-FWm" userLabel="First Responder" sceneMemberID="firstResponder"/>
