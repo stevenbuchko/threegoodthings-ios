@@ -51,28 +51,12 @@ class MainVC: UIViewController {
         
         
         
-//        NotificationCenter.default.addObserver(
-//            self,
-//            selector: #selector(self.batteryLevelChanged),
-//            name: .UIDeviceBatteryLevelDidChange,
-//            object: nil)
+
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     
     func postToFirebase() {
@@ -83,23 +67,25 @@ class MainVC: UIViewController {
         let month = calendar.component(.month, from: date)
         let day = calendar.component(.day, from: date)
         
+        counter += 1
+        
         let post: Dictionary<String, Any> = [
             "goodThing": goodInput.text!,
             "year": year,
             "month": month,
             "day": day,
+            "index": counter
         ]
         
         let firebasePost = DataService.ds.REF_USER_CURRENT.child("posts").childByAutoId()
         firebasePost.setValue(post)
-        counter += 1
         DataService.ds.REF_USER_CURRENT.child("totalCount").setValue(counter)
         updateCounter()
     }
     
     func updateCounter() {
         
-        let ref = DataService.ds.REF_USER_CURRENT.child("dailyCount")
+        let ref = DataService.ds.REF_USER_CURRENT.child("totalCount")
         
         ref.observeSingleEvent(of: .value, with: { (snapshot) in
             if let count = snapshot.value as? Int {
